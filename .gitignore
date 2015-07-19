@@ -3,6 +3,8 @@
 .project
 .settings/
 
+**/bower_components/**
+
 # Intellij
 .idea/
 *.iml
