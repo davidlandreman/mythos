@@ -8,8 +8,11 @@
 
 <body>
 
-	<div layout:fragment="section-content">
-		<h1>Homepage!</h1>
+	<div layout:fragment="section-content" ng-controller="MythosChatController">
+		<div class="chat" ng-repeat="element in history">
+			<h3>{{element.source}}</h3>
+			<p>{{element.text}}</p>
+		</div>
 	</div>
 	
 </body>

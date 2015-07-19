@@ -14,14 +14,18 @@
 	<script th:src="@{/bower_components/jquery/dist/jquery.min.js}"></script>
 	<script th:src="@{/bower_components/bootstrap/dist/js/bootstrap.min.js}"></script>
 	
+	<script th:src="@{/js/data/sample.js}"></script>
 	<script th:src="@{/js/mythos.js}"></script>
+	<script th:src="@{/js/controllers/chat.js}"></script>
 	
 	<!-- Include Neccessary CSS -->
 	<link rel="stylesheet" type="text/css" th:href="@{/bower_components/bootstrap/dist/css/bootstrap.min.css}">
 	
 
 </head>
-<body>
+<body class="container">
+
+	<h1>Mythos</h1>
 
 	<div layout:fragment="section-content"></div>
 	
