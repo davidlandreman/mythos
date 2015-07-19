@@ -1,1 +1,21 @@
-<h1>Homepage!</h1>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	layout:decorator="layouts/main">
+<head lang="en">
+
+<script
+	th:src="@{/js/launch-control/controllers/pre-live-controller.js}"></script>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/global/pre-live.css}" />
+
+</head>
+
+<body>
+
+	<div layout:fragment="section-content">
+		<h1>Homepage!</h1>
+	</div>
+	
+</body>
+</html>
