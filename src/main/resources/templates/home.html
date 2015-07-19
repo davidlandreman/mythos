@@ -9,9 +9,14 @@
 <body>
 
 	<div layout:fragment="section-content" ng-controller="MythosChatController">
-		<div class="chat" ng-repeat="element in history">
-			<h3>{{element.source}}</h3>
-			<p>{{element.text}}</p>
+		<div class="chat row" ng-repeat="element in history">
+			<div class="chat-text" ng-if="element.source != 'card'">
+				<h3>{{element.source}}</h3>
+				<p>{{element.text}}</p>
+			</div>
+			<div class="popup thumbnail col-xs-8 col-xs-offset-2" ng-if="element.source == 'card'">
+				<p>Card goes here</p>
+			</div>
 		</div>
 	</div>
 	

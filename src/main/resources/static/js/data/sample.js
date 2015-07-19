@@ -8,6 +8,9 @@ data = [
         	text: 'Are there any people of interest?'
         },
         {
+        	source: 'card'
+        },
+        {
         	source: 'rus',
         	text: 'You see: a local merchant @Luxor sitting at the bar, the head of the city guard @Todrick by the fire, and of course the proprietor of this establishment @BarKeep'
         },
