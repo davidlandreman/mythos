@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
-	ng-app="launchcontrol.NewLaunchControlApp">
+	ng-app="MythosApp">
 <head lang="en">
 
 	<meta charset="UTF-8">
@@ -11,9 +11,15 @@
 	
 	<!-- Javascript library includes -->
 	<script th:src="@{/bower_components/angular/angular.min.js}"></script>
+	<script th:src="@{/bower_components/jquery/dist/jquery.min.js}"></script>
+	<script th:src="@{/bower_components/bootstrap/dist/js/bootstrap.min.js}"></script>
+	
+	<!-- Include Neccessary CSS -->
+	<link rel="stylesheet" type="text/css" th:href="@{/bower_components/bootstrap/dist/css/bootstrap.min.css}">
+	
 
 </head>
-<body data-theme-name="launch-control" ng-cloak>
+<body>
 
 	<div layout:fragment="section-content"></div>
 	
