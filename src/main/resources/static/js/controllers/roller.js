@@ -1,6 +1,6 @@
-app.service("Roller", function($scope) {
+app.service("Roller", function() {
 	
-	this.getCoreRoll= function(){
+	this.getCoreRoll = function(){
 		var roll = {sum:0, exploit:false, mythic:false, rolled_1:0, rolled_2:0, rolled_3:0, rolled_4:0, exploit_number : null};
 		for(i=0;i<4;i++){
 			die_roll=Math.floor(Math.random()*4)+1;
@@ -20,7 +20,7 @@ app.service("Roller", function($scope) {
 		
 	}
 	
-	this.specialRoll =function(sides, number){
+	this.specialRoll = function(sides, number){
 		var roll = {sum:0, rolls:[]}
 		if (sides <= 1 || number <= 1){
 			return null;
@@ -32,6 +32,5 @@ app.service("Roller", function($scope) {
 		}
 		return roll;
 	}
-	
 	
 });

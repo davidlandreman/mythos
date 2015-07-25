@@ -1,12 +1,13 @@
-app.controller("ActionsController",[ 'Roller', function($scope) {
+app.controller("ActionsController", function($scope, Roller) {
 
 	$scope.currentRoll=null;
 	
 	$scope.getCoreRoll = function(){
-		currentRoll = Roller.getCoreRoll();
+		$scope.currentRoll = Roller.getCoreRoll();
+		console.log("Current Role", $scope.currentRoll);
 	}
 
 	
 	
 	
-}]);
+});
