@@ -1,5 +1,8 @@
-app.controller("MythosChatController", function($scope, RollerFactory) {
+app.controller("MythosChatController", function($scope) {
 
 	$scope.history = data;
+
+	
+	
 	
 });
