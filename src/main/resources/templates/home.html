@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org"
-	layout:decorator="layouts/main">
+	xmlns:th="http://www.thymeleaf.org" layout:decorator="layouts/main">
 <head lang="en">
 
 </head>
 
 <body>
 
-	<div layout:fragment="section-content" ng-controller="MythosChatController">
+	<div layout:fragment="section-content"
+		ng-controller="MythosChatController">
+
+		<div>
+			<div>
+				<button id="connect" ng-click="connect();">Connect</button>
+				<button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
+			</div>
+			<div id="conversationDiv">
+				<label>What is your name?</label><input type="text" id="name" />
+				<button id="sendName" ng-click="sendName();">Send</button>
+				<p id="response"></p>
+			</div>
+		</div>
+
+
 		<div class="chat row" ng-repeat="element in history">
 			<div class="chat-text" ng-if="element.source != 'card'">
 				<h3>{{element.source}}</h3>
 				<p>{{element.text}}</p>
 			</div>
-			<div class="popup thumbnail col-xs-8 col-xs-offset-2" ng-if="element.source == 'card'">
+			<div class="popup thumbnail col-xs-8 col-xs-offset-2"
+				ng-if="element.source == 'card'">
 				<p>Card goes here</p>
 			</div>
+			<noscript>
+				<h2 style="color: #ff0000">Seems your browser doesn't support
+					Javascript! Websocket relies on Javascript being enabled. Please
+					enable Javascript and reload this page!</h2>
+			</noscript>
+
 		</div>
-		<div ng-controller = "ActionsController">
-			<button ng-click = "getCoreRoll()">Core Roll</button>
+		<div ng-controller="ActionsController">
+			<button ng-click="getCoreRoll()">Core Roll</button>
 			<p>{{currentRoll}}</p>
 		</div>
 	</div>
-	
+
 </body>
 </html>

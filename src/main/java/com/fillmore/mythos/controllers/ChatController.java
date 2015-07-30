@@ -11,9 +11,8 @@ public class ChatController {
 	    @MessageMapping("/hello")
 	    @SendTo("/topic/greetings")
 	    public Message greeting(Message message) throws Exception {
-	        return new Message("");
+	        return new Message("zubat");
 	    }
 
 	}
 
-}
